@@ -66,6 +66,16 @@ class Widget_ImageWidget extends Widgets
 			'field' => 'image_id',
 			'label' => 'Image',
 			'rules' => 'required'
+			),
+		array(
+			'field' => 'link',
+			'label' => 'Link',
+			'rules' => ''
+			),
+		array(
+			'field' => 'link_target',
+			'label' => 'Link Target',
+			'rules' => 'required'
 			)
 		);
 
@@ -88,7 +98,8 @@ class Widget_ImageWidget extends Widgets
 
 		return array(
 			'options' => $options,
-			'image_select' => $image_select
+			'image_select' => $image_select,
+			'link_select' => array('_self' => 'Same Window', '_blank' => 'New Window')
 			);
 	}
 
@@ -104,12 +115,16 @@ class Widget_ImageWidget extends Widgets
 			return false;
 		}
 
+		if (empty($options['link'])) {
+			return '';
+		}
+
 		if (empty($image_select)) {
 			return '';
 		}
 
 		// Store the feed items
-		return array('image_id' => $image_select);
+		return array('image_id' => $image_select, 'link' => $options['link'], 'link_target' => $link_select);
 	}
 
 }
