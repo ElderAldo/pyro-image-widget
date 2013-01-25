@@ -6,7 +6,7 @@ A small image widget for PyroCMS. Allows you to add any image file from your fil
 ### Features
 * select any image in your files/uploads
 * add link on an image
-* choose target _blank|_self
+* choose target "_blank" or "_self"
 
 ### Steps
 * drop in widgets folder
