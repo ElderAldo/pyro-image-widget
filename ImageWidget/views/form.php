@@ -4,6 +4,10 @@
     <?php echo form_dropdown('image_id', $image_select, $options['image_id']); ?>
   </li>
   <li>
+    <label>Alt</label>
+    <?php echo form_input('alt', $options['alt']); ?>
+  </li>
+  <li>
     <label>Link</label>
     <?php echo form_input('link', $options['link']); ?>
   </li>

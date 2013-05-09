@@ -68,6 +68,11 @@ class Widget_ImageWidget extends Widgets
 			'rules' => 'required'
 			),
 		array(
+			'field' => 'alt',
+			'label' => 'Alt',
+			'rules' => 'required'
+			),
+		array(
 			'field' => 'link',
 			'label' => 'Link',
 			'rules' => ''
@@ -124,7 +129,7 @@ class Widget_ImageWidget extends Widgets
 		}
 
 		// Store the feed items
-		return array('image_id' => $image_select, 'link' => $options['link'], 'link_target' => $link_select);
+		return array('image_id' => $image_select, 'alt'=> $options['alt'], 'link' => $options['link'], 'link_target' => $link_select);
 	}
 
 }
